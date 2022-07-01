@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+/* ================ VARIABLES ================ */
+
+
+
+:root {
+
+    --navbar-height: 60px;
+    --blue: #283F9F;
+    /* a2d2ff 283F9F*/
+    --shadow-basic: 0 3px 4px 1px rgba(0, 0, 0, 0.2);
+    --shadow-basic-top: 0 -3px 4px 1px rgba(0, 0, 0, 0.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* =========== ОБЩИЕ СТИЛИ ============ */
+
+body {
+    /* height: calc(100vh - var(--navbar-height)); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+    height: calc(100vh - var(--navbar-height));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.SectionWrapper {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 220px 640px 220px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.PatternBackground {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+    background-color: #e5e5f7;
+    opacity: 0.1;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 40px), repeating-linear-gradient(#444cf755, #444cf7);
+}
+
+
+/* =========== КОМПОНЕНТНЫЕ СТИЛИ ============ */
+
+
+/* ###  Navbar component  ### */
+
+.Main {
+    height: 100%;
+}
+
+.NavbarWrapper {
+    background-color: var(--blue);
+    box-shadow: var(--shadow-basic);
+}
+
+.Navbar {
+    height: var(--navbar-height);
+    color: black;
+}
+
+.Navbar .LogoWrapper {
+    display: flex;
+}
+
+.Navbar .Logo {
+    color: white;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+
+}
+
+.Navbar .SearchWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.InputField {
+    border: 1px solid black;
+    border-radius: 18px;
+    padding: 0 15px;
+    width: 50%;
+    height: 25px;
+    outline: 0px;
+}
+
+.Navbar .LinkGroup {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Navbar .Avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: bisque;
+    cursor: pointer;
+}
+
+
+/* ###  Card component  ### */
+
+
+.CardsFeed {
+    display: flex;
+    grid-column: 2;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.CardWrapper {
+    width: 100%;
+    height: 180px;
+    margin-top: 160px;
+}
+
+.Card {
+    width: 100%;
+    height: 100%;
+    border: 0px solid transparent;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: var(--shadow-basic);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.CardList {
+    width: 100%;
+    height: 300px;
+    margin-top: 35px;
+    position: relative;
+
+}
+
+.CardItem {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: var(--shadow-basic-top);
+}
+
+.CardItemOne {
+    opacity: 0.2;
+}
+
+.CardItemTwo {
+    position: absolute;
+    top: 50px;
+    opacity: 0.4;
+}
+
+.CardItemThree {
+    position: absolute;
+    top: 100px;
+    opacity: 0.6;
+}
+
+.CardItemFour {
+    position: absolute;
+    top: 150px;
+    opacity: 0.8;
+}
+
+.CardItemFive {
+    position: absolute;
+    top: 200px;
+    opacity: 1;
+}
+
+.NameInputWrapper {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 25px;
+    gap: 1.5rem;
+}
+
+.DescriptionButton {
+
+}
+
+.DatePickerGroup {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-left: 25px;
 }

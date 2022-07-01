@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import { Route, Routes, Link } from 'react-router-dom';
+
 import './App.css';
+import Main from './components/Main';
+import Settings from './components/Settings';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <div className='PatternBackground'></div>
+            
+            <div className='NavbarWrapper'>
+                <div className='Container'>
+                    <div className='Navbar SectionWrapper'>
+                        <div className='LogoWrapper'>
+                            <h1 className='Logo'>Navbar</h1>
+                        </div>
+                        <div className='SearchWrapper'>
+                            <input className='InputField' type="text" placeholder='Найти заметку ...' />
+                        </div>
+                        <div className='LinkGroup'>
+                            <Link className='' to="/">Главная</Link>
+                            <Link to="/settings">Настройки</Link>
+                            <div className='Avatar'>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/settings" element={<Settings />} />
+            </Routes>
+        </>
+    );
 }
 
 export default App;
