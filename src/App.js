@@ -1,6 +1,7 @@
 import { Route, Routes, Link } from 'react-router-dom';
 
 import './App.css';
+import InputField from './components/Input/InputField';
 import Main from './components/Main';
 import Settings from './components/Settings';
 
@@ -16,7 +17,7 @@ function App() {
                             <h1 className='Logo'>Navbar</h1>
                         </div>
                         <div className='SearchWrapper'>
-                            <input className='InputField' type="text" placeholder='Найти заметку ...' />
+                            <InputField type="text" placeholder='Найти заметку ...'/>
                         </div>
                         <div className='LinkGroup'>
                             <Link className='' to="/">Главная</Link>

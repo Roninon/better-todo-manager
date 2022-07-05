@@ -14,10 +14,6 @@
 
 /* =========== ОБЩИЕ СТИЛИ ============ */
 
-body {
-    /* height: calc(100vh - var(--navbar-height)); */
-}
-
 #root {
     height: calc(100vh - var(--navbar-height));
 }
@@ -100,15 +96,6 @@ a {
 .Navbar .SearchWrapper {
     display: flex;
     justify-content: center;
-}
-
-.InputField {
-    border: 1px solid black;
-    border-radius: 18px;
-    padding: 0 15px;
-    width: 50%;
-    height: 25px;
-    outline: 0px;
 }
 
 .Navbar .LinkGroup {
@@ -206,10 +193,6 @@ a {
     align-items: center;
     padding-left: 25px;
     gap: 1.5rem;
-}
-
-.DescriptionButton {
-
 }
 
 .DatePickerGroup {

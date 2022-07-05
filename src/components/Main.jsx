@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import InputField from './Input/InputField';
 
 const Main = () => {
     return (
@@ -8,10 +9,10 @@ const Main = () => {
                 <div className='SectionWrapper'>
                     <div className='CardsFeed'>
                         <div className='CardWrapper'>
+                            <div className='Blur'></div>
                             <div className='Card'>
-
                                 <div className='NameInputWrapper'>
-                                    <input className='InputField' type="text" placeholder='Название заметки ...' />
+                                    <InputField onChange={(event) => console.log(event.target.value)} type="text" placeholder='Название заметки ...'/>
                                     <button className="DescriptionButton">Описание</button>
                                 </div>
                                 <div className="DatePickerGroup">
