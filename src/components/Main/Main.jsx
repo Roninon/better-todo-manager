@@ -1,6 +1,6 @@
 import React from 'react';
-import '../App.css';
-import InputField from './Input/InputField';
+import '../../App.css';
+import InputField from '../Input/InputField';
 
 const Main = () => {
     return (
@@ -12,7 +12,12 @@ const Main = () => {
                             <div className='Blur'></div>
                             <div className='Card'>
                                 <div className='NameInputWrapper'>
-                                    <InputField onChange={(event) => console.log(event.target.value)} type="text" placeholder='Название заметки ...'/>
+                                    <InputField
+                                        onChange={(event) => console.log(event.target.value)}
+                                        type="text"
+                                        placeholder='Название заметки ...'
+                                        style={{width: '50%'}}
+                                    />
                                     <button className="DescriptionButton">Описание</button>
                                 </div>
                                 <div className="DatePickerGroup">

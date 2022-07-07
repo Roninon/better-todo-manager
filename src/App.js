@@ -2,7 +2,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 
 import './App.css';
 import InputField from './components/Input/InputField';
-import Main from './components/Main';
+import Main from './components/Main/Main';
 import Settings from './components/Settings';
 
 function App() {
